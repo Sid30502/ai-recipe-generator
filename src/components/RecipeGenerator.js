@@ -24,7 +24,7 @@ const RecipeGenerator = () => {
   const handleGenerateRecipe = async () => {
     const result = await generateRecipe(ingredients, mealType);
     setRecipe(result);
-    const nutrition = await getNutritionInfo(result); // Assuming getNutritionInfo is a function that fetches nutrition info
+    const nutrition = await setNutritionInfo(result); // Assuming getNutritionInfo is a function that fetches nutrition info
     setNutritionInfo(nutrition);
     const image = await recipeImage(result); // Assuming recipeImage is a function that fetches the image
     setRecipeImage(image);
